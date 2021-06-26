@@ -1,0 +1,174 @@
+{
+  "name": "My first skill",
+  "type": "dialog",
+  "counts": {
+    "entity": 0,
+    "intent": 0,
+    "actions": 2,
+    "intents": 0,
+    "entities": 0,
+    "global_variables": 0
+  },
+  "status": "Available",
+  "created": "2021-03-09T11:19:41.332Z",
+  "updated": "2021-03-09T11:19:41.332Z",
+  "language": "en",
+  "skill_id": "61793bda-c446-4382-bc11-48be9e0fda50",
+  "workspace": {
+    "actions": [
+      {
+        "steps": [
+          {
+            "step": "step_001",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text": "I am afraid I do not understand what you are asking, please re-phrase your question."
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                }
+              ]
+            },
+            "handlers": [],
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_001"
+          }
+        ],
+        "title": "Retry when no action matches",
+        "action": "anything_else",
+        "handlers": [],
+        "condition": {
+          "expression": "anything_else"
+        },
+        "variables": [
+          {
+            "variable": "step_001"
+          }
+        ],
+        "disambiguation_opt_out": true
+      },
+      {
+        "steps": [
+          {
+            "step": "step_001",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text": "Welcome, how can I assist you?"
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                }
+              ]
+            },
+            "handlers": [],
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_001"
+          }
+        ],
+        "title": "Greet customer",
+        "action": "welcome",
+        "handlers": [],
+        "condition": {
+          "expression": "welcome"
+        },
+        "variables": [
+          {
+            "variable": "step_001"
+          }
+        ],
+        "next_action": "anything_else",
+        "disambiguation_opt_out": true
+      }
+    ],
+    "intents": [],
+    "entities": [],
+    "metadata": {
+      "api_version": {
+        "major_version": "v2",
+        "minor_version": "2018-11-08"
+      }
+    },
+    "variables": [],
+    "counterexamples": [],
+    "system_settings": {
+      "off_topic": {
+        "enabled": true
+      },
+      "disambiguation": {
+        "prompt": "Did you mean:",
+        "enabled": true,
+        "randomize": true,
+        "max_suggestions": 5,
+        "suggestion_text_policy": "title",
+        "none_of_the_above_prompt": "None of the above"
+      },
+      "system_entities": {
+        "enabled": true
+      },
+      "intent_classification": {
+        "training_backend_version": "v2"
+      },
+      "spelling_auto_correct": true
+    },
+    "learning_opt_out": false
+  },
+  "description": "",
+  "workspace_id": "61793bda-c446-4382-bc11-48be9e0fda50",
+  "dialog_settings": {
+    "actions": true
+  },
+  "snapshot_references": [
+    {
+      "snapshot": "draft"
+    }
+  ],
+  "workspace_reference": {
+    "metadata": {
+      "api_version": {
+        "major_version": "v2",
+        "minor_version": "2018-11-08"
+      }
+    },
+    "system_settings": {
+      "off_topic": {
+        "enabled": true
+      },
+      "disambiguation": {
+        "prompt": "Did you mean:",
+        "enabled": true,
+        "randomize": true,
+        "max_suggestions": 5,
+        "suggestion_text_policy": "title",
+        "none_of_the_above_prompt": "None of the above"
+      },
+      "system_entities": {
+        "enabled": true
+      },
+      "intent_classification": {
+        "training_backend_version": "v2"
+      },
+      "spelling_auto_correct": true
+    },
+    "learning_opt_out": false,
+    "status": "Available"
+  },
+  "assistant_references": [
+    {
+      "name": "My first assistant",
+      "assistant_id": "7e594e9e-a4c4-4363-aca4-87e514649e9f",
+      "skill_reference": "actions skill"
+    }
+  ]
+}
